@@ -1,0 +1,91 @@
+baseURL = "https://calmstayshop.github.io/"
+languageCode = "ko-kr"
+title = "calmstayshop 쇼핑 블로그"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+summaryLength = 35
+
+[pagination]
+pagerSize = 12
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true
+
+[minify]
+disableXML = false
+minifyOutput = true
+
+[sitemap]
+changefreq = "daily"
+priority = 0.7
+filename = "sitemap.xml"
+
+[permalinks]
+posts = "/posts/:slug/"
+
+[params]
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowShareButtons = true
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowToc = true
+TocOpen = false
+env = "production"
+description = "주방, 욕실, 수납 등 일상 생활을 편리하고 스마트하게 만들어주는 실용적인 생활용품 전문 쇼핑 블로그입니다. 가성비 높은 홈 리빙 아이템을 매일 엄선하여 추천해드립니다"
+keywords = ["생활용품쇼핑", "주방용품추천", "욕실용품", "수납정리용품", "홈리빙쇼핑"]
+images = ["/images/og-default.webp"]
+
+# Search engine verification (set only when needed)
+googleSiteVerification = ""
+naverSiteVerification = ""
+bingSiteVerification = ""
+yandexSiteVerification = ""
+
+[params.homeInfoParams]
+Title = "일상을 편리하게, 생활용품 전문 쇼핑 블로그 칼름스테이"
+Content = "주방, 욕실, 수납공간을 더욱 실용적으로 만들어줄 생활용품을 찾고 계신가요? 칼름스테이에서는 매일 사용하는 생활 속 필수 아이템을 엄선하여 소개합니다. 편리한 주방 도구, 청결한 욕실 용품, 공간을 깔끔하게 정리해주는 수납 솔루션까지 실생활에 꼭 필요한 제품들을 합리적인 가격으로 만나보세요."
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 2
+keys = ["title", "permalink", "summary", "content"]
+
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 5
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 20
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 30
